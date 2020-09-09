@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\User;
 
 class UserSeeder extends Seeder
 {
@@ -25,6 +26,17 @@ class UserSeeder extends Seeder
         ]);
 
         $usr = new User;
+            $usr -> fullname    = 'Alexis Blandon';
+            $usr -> email        = 'Alexisbladovel@hotmail.com';
+            $usr -> phone       = 3107894545;
+            $usr -> birthdate   = '1990-09-30';
+            $usr -> gender      = 'M';
+            $usr -> address     = 'km 5 via neira';
+            $usr -> password    = bcrypt('customer');
+            $usr -> created_at  = now();
+            $usr -> save();
+
+
         
         //
     }
