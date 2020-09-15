@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
             'fullname' => 'Jeison Blandon',
             'email'    => 'jeisonbladovel@gmail.com',
-            'phone'    => 3016084121,
+            'phone'    => 3206084121,
             'birthdate'=> '1970-09-29',
             'gender'   => 'M',
             'address'  => 'Av 30 de agosto 40-40',
@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
 
         $usr = new User;
             $usr -> fullname    = 'Alexis Blandon';
-            $usr -> email        = 'Alexisbladovel@hotmail.com';
+            $usr -> email       = 'Alexisbladovel@hotmail.com';
             $usr -> phone       = 3107894545;
             $usr -> birthdate   = '1990-09-30';
             $usr -> gender      = 'M';
@@ -38,6 +38,8 @@ class UserSeeder extends Seeder
 
 
         
-        //
+        //Factory
+        factory(User::class, 100)->create();
+        
     }
 }
