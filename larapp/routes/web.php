@@ -35,12 +35,22 @@ Route::get('edades', function () {
     
    foreach ($users as $user) {
 
-    $edad = Carbon::parse($user->birthdate)->age;
+    $edad = Carbon::parse($user->birthdate)->diff()->format('%y years old %m %d');
     $creacion = new Carbon($user->created_at);
     $creacion->setlocale('es');
     $tiempo = $creacion->diffForHumans();
+    $rs[] = $user->fullname.' tiene '.$edad.' años'.' se creo '.$tiempo;
     
-    dump($user->fullname.' tiene '.$edad.' años'.' se creo '.$tiempo);
+    //forma de mostrar el resultado
+    //dump($user->fullname.' tiene '.$edad.' años'.' se creo '.$tiempo);
+    //dump($rs); 
    }
-   
+   return view('edades', ['rs' => $rs]);
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
