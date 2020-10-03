@@ -15,12 +15,16 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                                <a class="nav-link" href="">EN</a>
-                            </li>
-                        <li class="nav-item">
-                                <a class="nav-link" href="">ES</a>
-                            </li>
+                        <div class="dropdown">
+                        <button class="btn btn-secundary dropdown-toggle" type="button" id="dropdownMenuButton" data-Toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Idioma                          
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">ES</a>
+                            <a class="dropdown-item" href="#">EN</a>
+                            </div>
+                        </div>
+                        
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
