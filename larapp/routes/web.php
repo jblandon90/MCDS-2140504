@@ -30,6 +30,12 @@ Route::get('user/{id}', function ($id) {
    
 });
 
+Route::get('examples', function () {
+    
+    return view('examples');
+   
+});
+
 Route::get('edades', function () {
    $users = App\User::all()->take(10);
     
