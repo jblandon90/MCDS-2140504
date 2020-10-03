@@ -6,3 +6,14 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+//custom
+
+body {
+    background-color: $cyan;
+
+    .card-header {
+        background-color: $teal;
+    }
+
+}

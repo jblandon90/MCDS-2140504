@@ -10899,3 +10899,11 @@ a.text-dark:focus {
   }
 }
 
+body {
+  background-color: #6cb2eb;
+}
+
+body .card-header {
+  background-color: #4dc0b5;
+}
+

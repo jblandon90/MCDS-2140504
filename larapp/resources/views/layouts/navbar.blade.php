@@ -15,6 +15,12 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                                <a class="nav-link" href="">EN</a>
+                            </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="">ES</a>
+                            </li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -22,7 +28,8 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('general.link-register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ 
+                                        __('general.link-register') }}</a>
                                 </li>
                             @endif
                         @else
