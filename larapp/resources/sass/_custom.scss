@@ -1,0 +1,49 @@
+.bg-larapp {
+	background-color: #1e5f74;
+}
+
+.btn-larapp {
+	background-color: #1e5f74;
+	color: rgba(255,255,255,.8);
+	&:hover {
+		color: rgba(255,255,255,1);
+	}
+}
+
+.btn-link {
+	color: #1e5f74;
+	&:hover {
+		color: #1e5f74;
+	}
+}
+
+.navbar-brand {
+	font-size: 0.8rem;
+}
+
+.card-header {
+	background-color: #133b5c;
+	color: #fff;
+	padding: 1rem 0rem 0.5rem 0rem;
+}
+
+.img-top-card {
+	margin: 0px auto;
+}
+
+h1 {
+	color: #133b5c;
+}
+
+// Pagination
+ul.pagination {
+	justify-content: center;
+	.page-item.active .page-link {
+		background-color: #1e5f74;
+		border-color: #133b5c;
+		color: rgba(255,255,255,.8);
+	}
+	.page-item .page-link {
+		color: #1e5f74;
+	}
+}

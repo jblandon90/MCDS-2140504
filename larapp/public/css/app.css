@@ -10899,11 +10899,56 @@ a.text-dark:focus {
   }
 }
 
-body {
-  background-color: #6cb2eb;
+.bg-larapp {
+  background-color: #1e5f74;
 }
 
-body .card-header {
-  background-color: #4dc0b5;
+.btn-larapp {
+  background-color: #1e5f74;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.btn-larapp:hover {
+  color: white;
+}
+
+.btn-link {
+  color: #1e5f74;
+}
+
+.btn-link:hover {
+  color: #1e5f74;
+}
+
+.navbar-brand {
+  font-size: 0.8rem;
+}
+
+.card-header {
+  background-color: #133b5c;
+  color: #fff;
+  padding: 1rem 0rem 0.5rem 0rem;
+}
+
+.img-top-card {
+  margin: 0px auto;
+}
+
+h1 {
+  color: #133b5c;
+}
+
+ul.pagination {
+  justify-content: center;
+}
+
+ul.pagination .page-item.active .page-link {
+  background-color: #1e5f74;
+  border-color: #133b5c;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+ul.pagination .page-item .page-link {
+  color: #1e5f74;
 }
 

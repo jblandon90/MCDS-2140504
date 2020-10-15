@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <div class="card">
-                <img src="{{ asset('imgs/bg-register.svg') }}" width="150px" class="my-2 img-top-card">
+                <img src="{{ asset('imgs/bg-register.svg') }}" width="300px" class="my-2 img-top-card">
                 <div class="card-header text-uppercase text-center">
                     <h5>
                         <i class="fa fa-user-edit"></i> 
@@ -31,6 +31,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+
                         <div class="form-group">
                                 <input id="fullname" type="text" class="form-control @error('fullname') is-invalid @enderror" name="fullname" value="{{ old('fullname') }}" placeholder="@lang('general.label-fullname')" autofocus>
 

@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-6 offset-md-3">
             <div class="card">
-                <img src="{{ asset('imgs/bg-login.svg') }}" width="150px" class="my-2 img-top-card">
+                <img src="{{ asset('imgs/bg-login.svg') }}" width="300px" class="my-2 img-top-card">
                 <div class="card-header text-uppercase text-center">
                     <h5>
                         <i class="fa fa-user-lock"></i> 

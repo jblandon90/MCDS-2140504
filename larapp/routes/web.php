@@ -20,15 +20,15 @@ Route::get('/', function () {
 });
 
 
-Route::post('helloword', function () {
+/*Route::post('helloword', function () {
     return "<h1>Hola</h1>";
    
-});
+});*/
 
-Route::get('user/{id}', function ($id) {
+/*Route::get('user/{id}', function ($id) {
     dd(App\User::find($id));
    
-});
+});*/
 
 Route::get('examples', function () {
     
@@ -36,7 +36,7 @@ Route::get('examples', function () {
    
 });
 
-Route::get('edades', function () {
+/*Route::get('edades', function () {
    $users = App\User::all()->take(10);
     
    foreach ($users as $user) {
@@ -52,7 +52,7 @@ Route::get('edades', function () {
     //dump($rs); 
    }
    return view('edades', ['rs' => $rs]);
-});
+});*/
 Auth::routes();
 
 // Resources
