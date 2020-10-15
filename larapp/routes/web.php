@@ -55,12 +55,16 @@ Route::get('edades', function () {
 });
 Auth::routes();
 
+// Resources
+Route::resources([
+    'users'         => 'UserController',
+    //'categories'  => 'CategoryController',
+    //'games'       => 'GameController',
+]);
+
+// Middleware
+Route::get('locale/{locale}', 'LocaleController@index');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
