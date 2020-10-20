@@ -30,7 +30,7 @@ class UserRequest extends FormRequest
             'birthdate' => 'required|date',
             'gender'    => 'required',
             'address'   => 'required',
-            'photo'     => 'required',
+            'photo'     => 'required|image|max:1000',
             'password'  => 'required|min:6|confirmed',
         ];
     }
