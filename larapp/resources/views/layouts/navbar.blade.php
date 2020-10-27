@@ -79,6 +79,10 @@
                                 <i class="fa fa-users"></i>
                                  Módulo Usuarios 
                             </a>
+                            <a class="dropdown-item" href="{{ url('categories') }}">
+                                <i class="fas fa-list-alt"></i>
+                                 Módulo Categorías 
+                            </a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();

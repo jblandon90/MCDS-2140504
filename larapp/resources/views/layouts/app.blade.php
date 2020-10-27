@@ -41,6 +41,7 @@
     <script src="{{ asset('js/sweetalert2@9.js') }}"></script>
     <script>
         $(document).ready(function() {
+            /* - - -*/
             @if (session('message'))
                 Swal.fire(
                     'Felicitaciones',
@@ -48,6 +49,31 @@
                     'success'
                 );
             @endif
+            /* - - -*/
+            $('#photo').change(function(event) {
+               let reader = new FileReader();
+               reader.onload = function(event) {
+                    $('#preview').attr('src', event.target.result);
+               }
+               reader.readAsDataURL(this.files[0]);
+            });
+            /* - - -*/
+            $('.btn-delete').click(function(event) {
+                Swal.fire({
+                title: 'Esta usted seguro ?',
+                text: 'Desea eliminar este registro',
+                icon: 'error',
+                showCancelButton: true,
+                cancelButtonColor: '#d0211c',
+                cancelButtonText: 'Cancelar',
+                confirmButtonColor: '#1e5f74',
+                confirmButtonText: 'Aceptar',
+                }).then((result) => {
+                if(result.value) {
+                $(this).parent().submit();
+                }
+            });
+        });
         });
     </script>
 </body>

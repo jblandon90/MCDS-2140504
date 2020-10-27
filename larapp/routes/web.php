@@ -58,7 +58,7 @@ Auth::routes();
 // Resources
 Route::resources([
     'users'         => 'UserController',
-    //'categories'  => 'CategoryController',
+    'categories'  => 'CategoryController',
     //'games'       => 'GameController',
 ]);
 

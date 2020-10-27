@@ -23,16 +23,31 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'fullname'  => 'required',
-            'email'     => 'required|email|unique:users',
-            'phone'     => 'required|numeric',
-            'birthdate' => 'required|date',
-            'gender'    => 'required',
-            'address'   => 'required',
-            'photo'     => 'required|image|max:1000',
-            'password'  => 'required|min:6|confirmed',
+         if ($this->method() == 'PUT') {
+        // Edit Form
+         return [
+        'fullname' => 'required',
+        'email' => 'required|email|unique:users,email,'.$this->id,
+        'phone' => 'required|numeric',
+        'birthdate' => 'required|date',
+        'gender' => 'required',
+        'address' => 'required',
+        'photo' => 'max:1000',
         ];
+        } else {
+        // Create Form
+        return [
+        'fullname' => 'required',
+        'email' => 'required|email|unique:users',
+        'phone' => 'required|numeric',
+        'birthdate' => 'required|date',
+        'gender' => 'required',
+        'address' => 'required',
+        'photo' => 'required|image|max:1000',
+        'password' => 'required|min:6|confirmed',
+    ];
+    }
+    
     }
 
     public function messages() {
