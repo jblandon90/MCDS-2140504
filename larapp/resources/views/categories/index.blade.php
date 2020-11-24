@@ -15,7 +15,7 @@
 				<thead>
 					<tr>
 						<th>Nombre de la Categoria</th>
-						<th class="d-none d-sm-table-cell">foto</th>
+						<th class="d-none d-sm-table-cell">Imagen</th>
 						<th class="d-none d-sm-table-cell">Descripcion</th>
 						<th>Acciones</th>
 					</tr>

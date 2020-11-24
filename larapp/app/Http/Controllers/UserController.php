@@ -60,7 +60,6 @@ class UserController extends Controller
         if($user->save()) {
             return redirect('users')->with('message', 'El Usuario: '.$user->fullname.' fue Adicionado con Exito!');
         } 
-
     }
 
     /**
@@ -122,7 +121,14 @@ class UserController extends Controller
     public function destroy(User $user)
     {
         if($user->delete()) {
-            return redirect('users')->with('message', 'El Usuario: '.$user->fullname.' fue eliminado con Exito!');
+            return redirect('users')->with('message', 'El Usuario: '.$user->fullname.' fue Eliminado con Exito!');
         } 
     }
+
+    public function pdf() {
+        $users = User::all();
+        $pdf = \PDF::loadView('users.pdf', compact('users'));
+        return $pdf->download('allusers.pdf');
+    }
+
 }

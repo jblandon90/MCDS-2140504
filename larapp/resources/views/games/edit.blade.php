@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Editar Usuario')
+@section('title', 'Editar Categoría')
 
 @section('content')
 	<div class="row">
 		<div class="col-md-6 offset-md-3">
 			<h1>
 				<i class="fa fa-pen"></i> 
-				Editar Usuario
+				Editar Juego
 			</h1>
 			<hr>
             <nav aria-label="breadcrumb">
@@ -20,23 +20,23 @@
                 </li>
                 <li class="breadcrumb-item">
                     <a href="{{ route('categories.index') }}">
-                        <i class="fa fa-users"></i>  
-                         Módulo Categorias
+                        <i class="fas fa-list-alt"></i> 
+                         Módulo Games
                     </a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">
                     <i class="fa fa-pen"></i> 
-                    Editar Categoria
+                    Editar Juego
                 </li>
               </ol>
             </nav>
 
-			<form method="POST" action="{{ url('categories/'.$category->id) }}" enctype="multipart/form-data">
+			<form method="POST" action="{{ url('games/'.$game->id) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
-                        <input type="hidden" name="id" value="{{ $category->id }}">
+                        <input type="hidden" name="id" value="{{ $game->id }}">
                         <div class="form-group">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('description', $category->name) }}" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $game->name) }}" placeholder="Nombre" autofocus>
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -46,24 +46,21 @@
                         </div>
 
                         <div class="form-group">
-                               <!--  <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description', $category->description) }}" autofocus>
+                                <textarea name="description" class="form-control @error('description') is-invalid @enderror" cols="30" rows="4" placeholder="Descripción">{{ old('description', $game->description) }}</textarea>
 
                                 @error('description')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror -->
-                                <textarea id="description" type="text" rows="3" class= "form-control
-                        @error('description') is-invalid @enderror" name="description" autofocus>{{
-                        old('description', $category->description) }}</textarea>
+                                @enderror
                         </div>
 
                         <div class="form-group">
                                 <div class="text-center my-3">
-                                    <img src="{{ asset($category->image) }}" class="img-thumbnail" id="preview" width="120px">
+                                    <img src="{{ asset($cat->image) }}" class="img-thumbnail" id="preview" width="120px">
                                 </div>
                                 <div class="custom-file">
-                                   <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="image" name="image" accept="image/*">
+                                   <input type="file" class="custom-file-input @error('image') is-invalid @enderror" id="photo" name="image" accept="image/*">
                                    <label class="custom-file-label" for="customFile"> 
                                    	 <i class="fa fa-upload"></i> 
                                    	 Imagen

@@ -62,6 +62,12 @@ Route::resources([
     'games'       => 'GameController',
 ]);
 
+// Exports PDF
+Route::get('generate/pdf/users', 'UserController@pdf');
+
+// Search Scope
+Route::post('users/search', 'UserController@search');
+
 // Middleware
 Route::get('locale/{locale}', 'LocaleController@index');
 

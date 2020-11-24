@@ -43,13 +43,9 @@ Adicionar Categoria
                             @enderror
                     </div>
                     <div class="form-group">
-                     <input id="description" type="text" class="form-control @error('name') is-invalid @enderror" name="description" value="{{ old('description') }}" placeholder="Descripcion" autofocus>
-
-                            @error('description')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                    <textarea id="description" type="text" rows="3" class= "form-control
+                        @error('description') is-invalid @enderror" name="description" value="{{
+                        old('description') }}" placeholder="Descripción" autofocus></textarea>
                     </div>
                     
                     <div class="form-group">
